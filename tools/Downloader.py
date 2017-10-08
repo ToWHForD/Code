@@ -7,9 +7,9 @@ agent="Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 
 class Download:
     @staticmethod
-    def getHttpStatus(url):
+    def getHttpStatus(url,redict=False):
         try:
-            return requests.get(url,allow_redirects=False).status_code
+            return requests.get(url,allow_redirects=redict).status_code
 
         except Exception as e:
             print("哎呀出错了呢，可能是网络的问题，检查下网络吧！",e) 
@@ -53,3 +53,4 @@ class Download:
                 mList = []
 
         return mList
+
