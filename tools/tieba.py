@@ -38,7 +38,7 @@ class checkIn:
         for name in self.tieba_list:
             checkIn.check(self,name)
 
-#cookies重要的是BDUSS的值，这个值是百度用户登录的唯一凭证。
+#cookies重要的是BDUSS的值，这个值是百度用户登录的唯一凭证
 #签到是向baidu_url post一个data数据包，这个数据包是个由ie，kw和tbs组成的
 #tbs的值是变化的，但可以通过向tbs_url执行get请求得到这个值
 def main():
